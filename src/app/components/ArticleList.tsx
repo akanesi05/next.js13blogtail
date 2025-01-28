@@ -11,7 +11,7 @@ const ArticleList = ({articles}:ArticleListProps) => {
     <div>
       {articles.map((article)=>(<article className="shadow my-4" key={article.id}>
          <Link href={`articles/${article.id}`} className="hover:opacity-75">
-         <Image src="https://picsum.photos/1280/300" alt="" width={1280} height={300}/>
+         <Image src={"https://picsum.photos/1280/300?random=${article.id}"} alt="" width={1280} height={300}/>
          </Link>   
         <div className="bg-white flex flex-col justify-start p-6">
           <Link href="#" className="text-blue-700 text-sm font-bold uppercase pb-4">technology</Link>
