@@ -13,9 +13,10 @@ export const getAllArticles =async():Promise<Article[]>=>{
 };
 
 
-export const getDetailArticles =async(id:string):Promise<Article>=>{
+export const getDetailArticle =async(id:string):Promise<Article>=>{
    
-    const res =await fetch(`http://localhost:3001/posts/${id}`,{next:{revalidate:60},})
+    // const res =await fetch(`http://localhost:3001/posts/${id}`,{next:{revalidate:60},})
+    const res = await fetch(`http://localhost:3001/posts/${id}`, { next: { revalidate: 60 } });
     
     if (res.status===400){
         notFound();
