@@ -15,7 +15,7 @@ const ArticleCard=({article}:ArticleCardProps) =>{
      <Link href="#" className="text-blue-700 text-sm font-bold uppercase pb-4">technology</Link>
      <Link href={`articles/${article.id}`} className="text-slate-900 text-3xl font-bold hover:text-gray-700 pb-4">{article.title}</Link>
      <Link href="#" className="text-3xl font-bold hover:text-gray-700 pb-4">
-       Lorem Ipsum Dolor Sit Amet Dolor Sit Amet
+       
      </Link>
      <p className="text-sm pb-3 text-slate-900">
        By{" "}

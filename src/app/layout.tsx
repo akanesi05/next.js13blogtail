@@ -20,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="container mx-auto bg-slate-700">
-        <Header/>
+        <div className="flex flex-col min-h-screen">
+          <Header/>
+          <main className="flex-grow"> <Suspense fallback ={<Loading/>}> {children}</Suspense></main>
         <Suspense fallback ={<Loading/>}> {children}</Suspense>
-        <Footer/>
+        <Footer/></div>
       </body>
     </html>
   )
