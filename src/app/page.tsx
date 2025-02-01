@@ -4,8 +4,12 @@ import ArticleList from './components/ArticleList';
 import { getAllArticles } from "@/blogAPI";
 import {supabase} from "@/utils/supabaseClient";
 export default async function Home() {
-  const articles = await getAllArticles()
-  console.log(supabase)
+  // const articles = await getAllArticles()
+  //console.log(articles)
+  const API_URL=process.env.NEXT_PUBLIC_API_URL;
+  const res =await fetch(`${API_URL}/api`,{cache:"no-store"})
+  const articles = await res.json();
+  console.log(articles)
   return (
   <div className="md:flex">
    <section className="w-full md:w-2/3 flex flex-col items-center px-3">

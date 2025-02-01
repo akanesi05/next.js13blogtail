@@ -22,15 +22,12 @@ const ArticleCard=({article}:ArticleCardProps) =>{
        <a href="#" className="font-semibold hover:text-gray-800">
          David Grzyb
        </a>
-       , Published on {article.createdAt}
+       , Published on {new Date (article.createdAt).toLocaleDateString()}
      </p>
      <a href={`articles/${article.id}`} className="text-slate-900 pb-6">
        {article.content.length>70? article.content.substring(0,70)+"...":article.content}
      
      </a>
-     {/* <a href="#" className="uppercase text-gray-800 hover:text-black">
-       Continue Reading <i className="fas fa-arrow-right"></i>
-     </a> */}
      <Link href={`articles/${article.id}`} className="text-pink-800 hover:text-black">続きを読む</Link>
    </div>
    </article></div>
